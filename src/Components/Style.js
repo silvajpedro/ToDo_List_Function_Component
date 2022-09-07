@@ -106,3 +106,35 @@ img{
     }
 }
 `
+export const CaixaTarefas = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+position: absolute;
+top: 52vh;
+width:50%;
+gap: 14px;
+div{
+  border-radius:5px;
+  display: flex;
+  align-items: center;
+  height: 14vh;
+  width: 48vw;
+  background-color: #262626;
+  transition: ease-in-out 0.5s;
+  &:hover{
+    background-color: #414041;
+  }
+  
+}
+p{
+  display: flex;
+  align-items: center;
+  height: 13vh;
+  color: white;
+  font-size: 32px;
+  padding-left: 10px;
+
+}
+`

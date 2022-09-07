@@ -26,15 +26,21 @@ export default function Mainbox() {
           <S.InputBox>
             <input onChange={(e) => { setTarefas(e.target.value) }} value={tarefas} placeholder="Digite sua Tarefa" />
             <img src={removeTudo} />
-
           </S.InputBox>
-          <button onClick={() => { 
-            if(tarefas !== ""){ 
+          <button onClick={() => {
+            if (tarefas !== "") {
               setListaDeTarefas([...listaDeTarefas, tarefa])
               setTarefas('')
-            }}}>Adicionar Tarefa</button>
+            }
+          }}>Adicionar Tarefa</button>
         </S.AddBox>
-       
+        <S.CaixaTarefas>
+          {listaDeTarefas.map((item)=>(
+            <div>
+              <p>{item.tarefa}</p>
+            </div>
+              ))}
+              </S.CaixaTarefas>
       </S.Main>
     </>
   )
