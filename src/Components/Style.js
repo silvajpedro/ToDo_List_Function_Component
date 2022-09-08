@@ -24,26 +24,35 @@ transition: ease-in-out 0.5s;
 &:hover, :hover + span{
   transform: scale(105%);
 }
+@media (min-width: 1700px) {
+ font-size: 50px;
+}
 }
 span{
   position: relative;
-  top: -23vh;
+  top: -19.5vh;
   background-color: #4DB876;
   width: 16.2vw;
   height: 0.6vh;
   border-radius:5px;
   transition: ease-in-out 0.5s;
 }
+@media (min-width: 1700px) {
+  span{
+    top:-19vh;
+    width: 17vw;
+  }
+}
 `
 export const AddBox = styled.div`
 position: relative;
-top: -20vh;
+top: -16vh;
 display: flex;
 flex-direction: column;
 align-items: center;
 width: 46vw;
 height: 20vh;
-border: solid;
+border: solid red;
 button{
     box-shadow: 2px 2px;
     font-size: 22px;
@@ -52,9 +61,20 @@ button{
     border-radius:5px;
     background-color: #4DB876;
     cursor: pointer;
+    font-weight: 700;
+    
     &:hover{
         transform: scale(106%);
     }
+}
+@media (min-width: 1700px) {
+ height:25vh ;
+ button{
+  position: relative;
+  top: 1.5vh;
+  height: 8vh;
+  font-size: 24px;
+ }
 }
 `
 export const InputBox = styled.div`
@@ -64,6 +84,8 @@ justify-content: space-evenly;
 width: 44vw;
 height: 11vh;
 input{
+  position: relative;
+  left: 1.3vw;
     height: 50px;
     padding-left: 10px;
     width: 38vw;
@@ -75,18 +97,29 @@ input{
     outline: solid #4DB876 0px;
     transition: ease-in-out 0.2s;
     &::placeholder{
-        font-size: 26px;
         color: #ffff;
     }
     &:focus{
       border: none;
       outline: solid #4DB876 3px;
     }
+    @media (min-width: 1700px) {
+      height: 9.5vh;
+      &::placeholder{
+        font-size: 28px;
+    }
+    }
 }
 img{
     position: relative;
-    cursor: pointer;
+    left: 1vw;
+    /* border: springgreen solid; */
     height: 8vh;
+    cursor: pointer;
+    transition: ease-in-out 0.5s;
+    @media (min-width: 1700px) {
+      height: 9.5vh;
+    }
     &:hover{
       animation: Select 0.5s linear 0s infinite normal none;
       @keyframes Select {
@@ -115,10 +148,10 @@ position: absolute;
 top: 52vh;
 width:50%;
 gap: 14px;
-div{
+section{
+  position: relative;
   border-radius:5px;
   display: flex;
-  align-items: center;
   height: 14vh;
   width: 48vw;
   background-color: #262626;
@@ -129,12 +162,44 @@ div{
   
 }
 p{
+
+  width: 50vw;
   display: flex;
   align-items: center;
   height: 13vh;
   color: white;
   font-size: 32px;
   padding-left: 10px;
+  @media (min-width: 1700px) {
+    font-size: 36px;
+    }
+}
+div{
+  position: relative;
+  z-index: 10;
+  border: solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  right: 0.5vw;
+  width: 8.5vw;
+}
+.checkImage, .removeImage{
+  position: relative;
+  z-index: 10;
+  height: 8.4vh;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+  top: 0.2vh;
+  &:hover{
+   top:-0.5vh;
+   height:8.6vh;
+  }
+}
+.checkImage{
+}
+.removeImage{
 
 }
 `
