@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 export const Main = styled.main`
 display: flex;
 align-items: center;
@@ -47,12 +46,8 @@ span{
 export const AddBox = styled.div`
 position: relative;
 top: -16vh;
-display: flex;
-flex-direction: column;
-align-items: center;
 width: 46vw;
 height: 20vh;
-border: solid red;
 button{
     box-shadow: 2px 2px;
     font-size: 22px;
@@ -62,7 +57,6 @@ button{
     background-color: #4DB876;
     cursor: pointer;
     font-weight: 700;
-    
     &:hover{
         transform: scale(106%);
     }
@@ -75,6 +69,11 @@ button{
   height: 8vh;
   font-size: 24px;
  }
+}
+form{
+ display: flex;
+ align-items: center;
+ flex-direction: column;
 }
 `
 export const InputBox = styled.div`
@@ -113,7 +112,6 @@ input{
 img{
     position: relative;
     left: 1vw;
-    /* border: springgreen solid; */
     height: 8vh;
     cursor: pointer;
     transition: ease-in-out 0.5s;
@@ -159,10 +157,8 @@ section{
   &:hover{
     background-color: #414041;
   }
-  
 }
 p{
-
   width: 50vw;
   display: flex;
   align-items: center;
@@ -175,9 +171,6 @@ p{
     }
 }
 div{
-  position: relative;
-  z-index: 10;
-  border: solid;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -198,8 +191,6 @@ div{
   }
 }
 .checkImage{
-}
-.removeImage{
-
+  left: -0.3vw;
 }
 `
