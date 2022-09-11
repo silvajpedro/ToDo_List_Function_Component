@@ -1,10 +1,34 @@
 import styled from "styled-components";
+import { createGlobalStyle } from "styled-components";
+export const GlobalStyle = createGlobalStyle`
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #2B2D42;
+  
+}
+body::-webkit-scrollbar {
+  width: 10px;               
+}
+
+body::-webkit-scrollbar-track {
+  background: #000000;        
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color:#4DB876;  
+  border-radius: 20px;       
+}
+`
 export const Main = styled.main`
 display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
-height: 99vh;
+height: 100vh;
 h1{
     font-family:"Permanent Marker", sans-serif;
     position: relative;
@@ -49,9 +73,11 @@ top: -16vh;
 width: 46vw;
 height: 20vh;
 button{
+  position: relative;
+  top: 1vh;
     box-shadow: 2px 2px;
     font-size: 22px;
-    height: 6.5vh;
+    height: 7vh;
     width: 28vw;
     border-radius:5px;
     background-color: #4DB876;
@@ -85,7 +111,7 @@ height: 11vh;
 input{
   position: relative;
   left: 1.3vw;
-    height: 50px;
+    height: 60px;
     padding-left: 10px;
     width: 38vw;
     border-radius: 10px;
@@ -193,4 +219,26 @@ div{
 .checkImage{
   left: -0.3vw;
 }
+`
+export const MsgVazia = styled.h2`
+font-family: "Permanet Marker", sans-serif;
+display: none;
+justify-content: center;
+align-items: center;
+font-family: "Roboto", sans-serif;
+font-size: 30px;
+color: #ffff;
+height: 11vh;
+animation: Select 1.5s linear 0s infinite normal none;
+      @keyframes Select {
+        0%{
+          transform: scale(100%);
+        }
+        50%{
+          transform: scale(110%);
+        }
+        100%{
+          transform: scale(100%);
+        }
+      }
 `
